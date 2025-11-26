@@ -1,26 +1,34 @@
-# Jalur Belajar Blockchain
+# Kurikulum Blockchain dari Nol (Project-Based)
 
-Disusun untuk web developer yang pindah ke Solidity/Hardhat. Ikuti modul berurutan; tiap modul ada tugas praktik di repo ini.
+Dirancang untuk dev web mid-level yang pindah ke blockchain. Semua materi dalam repo ini, fokus praktik dengan Hardhat v2.
 
-## Cara Pakai
-- Baca modul, lakukan bagian "Coba" di terminal/editor.
-- Jika build terasa berantakan, jalankan `npx hardhat clean`.
-- Simpan catatan dan pertanyaan di `LEARN/notes.md` (buat sendiri).
-- Estimasi waktu total: 6–10 jam fokus.
+## Tujuan Akhir
+Bangun dan deploy **DApp Langganan On-chain**: kontrak langganan berlangganan/berhenti, pembayaran token ERC20, dashboard frontend sederhana.
 
-## Modul
-1. Fondasi & Setup (`01-foundations.md`)
-2. Dasar Solidity (`02-solidity-basics.md`)
-3. Alur Kerja Hardhat (`03-hardhat-workflow.md`)
-4. Testing Smart Contract (`04-testing.md`)
-5. Deploy & Jaringan (`05-deployment.md`)
-6. Integrasi Frontend (`06-frontend.md`)
-7. Keamanan & Efisiensi Gas (`07-security.md`)
-8. Langkah Lanjut & Referensi (`08-next-steps.md`)
+## Cara Menggunakan
+- Ikuti urutan modul (00–12). Tiap modul ada: Konsep, Langkah Praktik, Selesai Ketika.
+- Kerjakan di repo ini. Simpan catatan di `LEARN/notes.md`.
+- Jalankan perintah di root repo, kecuali disebut lain.
 
-## Quick Start Repo
-```bash
-npm install
-npx hardhat compile
-npx hardhat test   # gagal dulu sampai kamu menulis test di modul 4
-```
+## Peta Modul
+- 00-roadmap: orientasi & instalasi
+- 01-evm-basics: cara kerja EVM & transaksi
+- 02-solidity-primer: bahasa dasar
+- 03-hardhat-runner: struktur & task Hardhat v2
+- 04-tasks-scripts: tulis task & script kustom
+- 05-testing: Mocha/Chai + fixtures
+- 06-erc20: token & pembayaran
+- 07-erc721: NFT & metadata
+- 08-subscription-contract: kontrak langganan (proyek utama inti)
+- 09-frontend-dapp: dashboard React/Vite + ethers v6
+- 10-deployment: jaringan testnet, env, verifikasi
+- 11-security-gas: audit ringan & optimasi
+- 12-extensions: ide lanjutan (upgradeable, subgraph, CI)
+
+> Tips: kalau build berantakan, `npx hardhat clean`. Gunakan `npm install` lebih dulu.
+
+---
+<p align="center">
+  <a href="../AGENTS.md">⬅️ Previous</a> |
+  <a href="00-roadmap.md">Next ➡️</a>
+</p>

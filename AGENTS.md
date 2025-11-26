@@ -37,7 +37,13 @@
 - Review external dependencies before adding them; prefer audited libraries.
 - When deploying, confirm network and gas settings explicitly; keep deployment scripts idempotent where possible.
 
-## Learning Path (Mentor Mode)
-- Self-guided curriculum lives in `LEARN/` (start with `LEARN/README.md`).
-- Follow modules in order; each has a hands-on task tied to this repo.
-- Keep `LEARN/notes.md` for questions and next steps so context travels with you across machines/tools.
+## Learning Path (Mode Mentor)
+- Kurikulum terbaru ada di `LEARN/` (mulai `LEARN/README.md`) dan ditulis penuh Bahasa Indonesia.
+- Ikuti modul 00–12 berurutan: dari fondasi EVM, Solidity, Hardhat v2, ERC20/721, hingga proyek langganan on-chain + frontend.
+- Simpan catatan pribadi di `LEARN/notes.md` agar progres dan pertanyaan konsisten meski pindah mesin/tool.
+
+---
+<p align="center">
+  <a href="README.md">⬅️ Previous</a> |
+  <a href="LEARN/README.md">Next ➡️</a>
+</p>
