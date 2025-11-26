@@ -1,15 +1,15 @@
-# 4. Testing Smart Contracts
+# 4. Testing Smart Contract
 
-## Goal
-Write Mocha/Chai tests and build confidence.
+## Tujuan
+Menulis test Mocha/Chai dan membangun kepercayaan kode.
 
-## Key Concepts
-- Hardhat uses Mocha (test runner) + Chai (assertions) + ethers.js for calls.
-- Arrange/Act/Assert structure keeps tests readable.
-- Use fixtures or beforeEach to deploy fresh contracts.
+## Konsep Kunci
+- Hardhat memakai Mocha (runner) + Chai (assertion) + ethers.js untuk call.
+- Pola Arrange/Act/Assert menjaga test tetap jelas.
+- Gunakan fixture atau `beforeEach` untuk deploy ulang kontrak.
 
-## Try it
-1) Create `test/storage.ts`:
+## Coba
+1) Buat `test/storage.ts`:
 ```ts
 import { ethers } from "hardhat";
 import { expect } from "chai";
@@ -21,20 +21,20 @@ describe("Storage", () => {
     return { storage };
   }
 
-  it("sets and reads number", async () => {
+  it("menyetel dan membaca number", async () => {
     const { storage } = await deploy();
     await storage.setNumber(7);
     expect(await storage.number()).to.equal(7n);
   });
 
-  it("rejects oversized values", async () => {
+  it("menolak nilai terlalu besar", async () => {
     const { storage } = await deploy();
     await expect(storage.setNumber(2_000_000)).to.be.revertedWith("Too big");
   });
 });
 ```
-2) Run tests: `npx hardhat test`.
-3) Add another test: ensure event `NumberUpdated` emits expected args.
+2) Jalankan test: `npx hardhat test`.
+3) Tambah test lain: pastikan event `NumberUpdated` emit dengan argumen benar.
 
-## Done when
-Tests pass and you can explain how fixtures keep state isolated per test.
+## Selesai ketika
+Test lulus dan kamu bisa jelaskan bagaimana fixture membuat state terisolasi per test.

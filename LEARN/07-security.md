@@ -1,18 +1,18 @@
-# 7. Security & Gas Hygiene
+# 7. Keamanan & Efisiensi Gas
 
-## Goal
-Adopt safe defaults before mainnet.
+## Tujuan
+Memakai prinsip aman sebelum mainnet.
 
-## Key Concepts
-- Common risks: reentrancy, integer overflow (checked by default in 0.8+), access control mistakes, unbounded loops.
-- Checks-Effects-Interactions pattern; prefer `pull` payments.
-- Gas tips: avoid unbounded state growth, pack storage where sensible, short revert strings.
+## Konsep Kunci
+- Risiko umum: reentrancy, overflow (sudah dicek di 0.8+), salah akses kontrol, loop tak terbatas.
+- Pola Checks-Effects-Interactions; lebih aman gunakan pola tarik dana (pull) daripada push.
+- Tips gas: hindari pertumbuhan state tak terbatas, pack storage bila masuk akal, gunakan string revert singkat.
 
-## Try it
-1) Add a simple access control to `setNumber` (e.g., owner-only) using `address public owner;` and `constructor() { owner = msg.sender; }`.
-2) Add a modifier `onlyOwner` and protect mutating functions.
-3) Run tests and add a test that non-owners revert.
-4) Run `npx hardhat test` and note gas reports if enabled (consider adding the `hardhat-gas-reporter` plugin later).
+## Coba
+1) Tambah akses kontrol sederhana ke `setNumber` (mis. hanya pemilik) dengan `address public owner;` dan `constructor() { owner = msg.sender; }`.
+2) Buat modifier `onlyOwner` dan pakai di fungsi mutasi.
+3) Jalankan test dan tambahkan test yang memastikan non-owner revert.
+4) Jalan `npx hardhat test` dan catat gas jika mengaktifkan plugin gas reporter di masa depan.
 
-## Done when
-You can articulate how Checks-Effects-Interactions reduces risk and have a passing non-owner revert test.
+## Selesai ketika
+Kamu bisa menjelaskan bagaimana Checks-Effects-Interactions mengurangi risiko dan test non-owner revert lulus.

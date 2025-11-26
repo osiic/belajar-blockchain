@@ -1,24 +1,24 @@
-# 2. Solidity Basics
+# 2. Dasar Solidity
 
-## Goal
-Understand language essentials and extend the existing Storage contract.
+## Tujuan
+Paham dasar bahasa dan memperluas kontrak Storage yang ada.
 
-## Key Concepts
-- Data locations: storage, memory, calldata.
-- Visibility: public / external / internal / private.
-- Functions: view/pure vs state-changing.
-- Events: lightweight logging; indexed params aid filtering.
-- Errors/reverts: `require`, `revert`, `assert`.
+## Konsep Kunci
+- Lokasi data: storage, memory, calldata.
+- Visibilitas: public / external / internal / private.
+- Fungsi: view/pure vs mengubah state.
+- Event: log ringan; parameter `indexed` memudahkan filter.
+- Error/revert: `require`, `revert`, `assert`.
 
-## Try it
-1) Add a getter event and bounds check to `contracts/Storage.sol`:
+## Coba
+1) Tambah event dan pengecekan batas di `contracts/Storage.sol`:
 ```solidity
-// emit when value changes
+// emit saat nilai berubah
 event NumberUpdated(uint256 indexed previous, uint256 indexed current, address indexed caller);
 ```
-2) Modify `setNumber` to `require(_num <= 1_000_000, "Too big");` then emit the event.
-3) Recompile: `npx hardhat compile` (fix warnings).
+2) Ubah `setNumber` agar `require(_num <= 1_000_000, "Too big");` lalu emit event.
+3) Kompilasi: `npx hardhat compile` (perbaiki warning jika ada).
 
-## Done when
-- Compile passes.
-- You can explain difference between storage/memory and why events matter.
+## Selesai ketika
+- Kompilasi sukses.
+- Kamu bisa jelaskan bedanya storage/memory dan fungsi event.

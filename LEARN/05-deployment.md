@@ -1,21 +1,21 @@
-# 5. Deployment & Networks
+# 5. Deploy & Jaringan
 
-## Goal
-Understand network configs and safe deployment habits.
+## Tujuan
+Paham konfigurasi jaringan dan kebiasaan deploy yang aman.
 
-## Key Concepts
-- Networks: `localhost`, `sepolia`, `mainnet`. Each needs RPC URL + account key.
-- Environment variables: store secrets in `.env` (never commit).
-- Gas & confirmations: estimate first; wait for confirmations on live nets.
+## Konsep Kunci
+- Jaringan: `localhost`, `sepolia`, `mainnet`. Tiap jaringan butuh RPC URL + private key.
+- Environment variable: simpan rahasia di `.env` (jangan commit).
+- Gas & konfirmasi: estimasi dulu; tunggu konfirmasi di jaringan publik.
 
-## Try it
-1) Install dotenv if needed:
+## Coba
+1) Jika perlu, pasang dotenv:
 ```bash
 npm install --save-dev dotenv
 ```
-2) Extend `hardhat.config.ts` with a `sepolia` network using `process.env.SEPOLIA_RPC` and `PRIVATE_KEY` (do not commit keys).
-3) Update `scripts/deploy.js` to log the network name and handle missing keys gracefully.
-4) Dry-run: `npx hardhat run scripts/deploy.js --network localhost` (should still work).
+2) Tambah konfigurasi `sepolia` di `hardhat.config.ts` dengan `process.env.SEPOLIA_RPC` dan `PRIVATE_KEY` (jangan pernah commit key).
+3) Update `scripts/deploy.js` untuk log nama network dan menolak jalan kalau key tidak ada.
+4) Dry-run: `npx hardhat run scripts/deploy.js --network localhost` (harus tetap jalan).
 
-## Done when
-You can describe what changes between localhost and testnet deploys and how to keep keys out of git.
+## Selesai ketika
+Kamu bisa jelaskan apa yang berubah antara deploy localhost dan testnet serta cara menjaga key tetap aman.

@@ -1,30 +1,30 @@
-# 3. Hardhat Workflow
+# 3. Alur Kerja Hardhat
 
-## Goal
-Get fluent with Hardhat tasks, console, and script execution.
+## Tujuan
+Lancar memakai task Hardhat, console, dan eksekusi script.
 
-## Key Concepts
-- Hardhat Network (in-memory, auto-mines).
-- Tasks: built-ins (`compile`, `test`, `node`, `run`) and custom.
-- Scripts: `npx hardhat run` executes JS/TS scripts against a network.
+## Konsep Kunci
+- Hardhat Network: jaringan lokal in-memory, auto-mine.
+- Task: bawaan (`compile`, `test`, `node`, `run`) dan kustom.
+- Script: `npx hardhat run` mengeksekusi JS/TS terhadap jaringan tertentu.
 
-## Try it
-1) Inspect `hardhat.config.ts` (already targets Solidity 0.8.28).
-2) Start a local node:
+## Coba
+1) Cek `hardhat.config.ts` (versi Solidity 0.8.28).
+2) Jalankan node lokal:
 ```bash
 npx hardhat node
 ```
-3) In another terminal, deploy using the existing script:
+3) Di terminal lain, deploy pakai script yang ada:
 ```bash
 npx hardhat run scripts/deploy.js --network localhost
 ```
-4) Use the console to interact:
+4) Interaksi via console:
 ```bash
 npx hardhat console --network localhost
-> const storage = await ethers.getContractAt("Storage", "<address from deploy>");
+> const storage = await ethers.getContractAt("Storage", "<alamat dari deploy>");
 > await storage.setNumber(42);
 > (await storage.number()).toString();
 ```
 
-## Done when
-You can start/stop `npx hardhat node`, deploy, and read/write state via console.
+## Selesai ketika
+Kamu bisa start/stop `npx hardhat node`, deploy, dan baca/tulis state lewat console.

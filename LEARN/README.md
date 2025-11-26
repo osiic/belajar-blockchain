@@ -1,26 +1,26 @@
-# Blockchain Learning Path
+# Jalur Belajar Blockchain
 
-Welcome! This path is tailored for a web-dev moving into Solidity/Hardhat. Work through modules in order; each has a hands-on task using this repo.
+Disusun untuk web developer yang pindah ke Solidity/Hardhat. Ikuti modul berurutan; tiap modul ada tugas praktik di repo ini.
 
-## How to use
-- Read a module, then do the "Try it" steps in your terminal/editor.
-- Keep Hardhat artifacts clean: run `npx hardhat clean` between bigger changes if builds get messy.
-- Track notes in `LEARN/notes.md` (create it) and keep questions per module.
-- Expected total time: ~6–10 focused hours.
+## Cara Pakai
+- Baca modul, lakukan bagian "Coba" di terminal/editor.
+- Jika build terasa berantakan, jalankan `npx hardhat clean`.
+- Simpan catatan dan pertanyaan di `LEARN/notes.md` (buat sendiri).
+- Estimasi waktu total: 6–10 jam fokus.
 
-## Modules
-1. Foundations & Setup (`01-foundations.md`)
-2. Solidity Basics (`02-solidity-basics.md`)
-3. Hardhat Workflow (`03-hardhat-workflow.md`)
-4. Testing Smart Contracts (`04-testing.md`)
-5. Deployment & Networks (`05-deployment.md`)
-6. Frontend Integration (`06-frontend.md`)
-7. Security & Gas Hygiene (`07-security.md`)
-8. Next Steps & References (`08-next-steps.md`)
+## Modul
+1. Fondasi & Setup (`01-foundations.md`)
+2. Dasar Solidity (`02-solidity-basics.md`)
+3. Alur Kerja Hardhat (`03-hardhat-workflow.md`)
+4. Testing Smart Contract (`04-testing.md`)
+5. Deploy & Jaringan (`05-deployment.md`)
+6. Integrasi Frontend (`06-frontend.md`)
+7. Keamanan & Efisiensi Gas (`07-security.md`)
+8. Langkah Lanjut & Referensi (`08-next-steps.md`)
 
-## Repo quick start
+## Quick Start Repo
 ```bash
 npm install
 npx hardhat compile
-npx hardhat test   # will fail until you add tests in module 4
+npx hardhat test   # gagal dulu sampai kamu menulis test di modul 4
 ```

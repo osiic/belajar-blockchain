@@ -1,16 +1,16 @@
-# 6. Frontend Integration
+# 6. Integrasi Frontend
 
-## Goal
-Connect a React/Vite front end to your contract using ethers.js.
+## Tujuan
+Menghubungkan frontend React/Vite ke kontrak via ethers.js.
 
-## Key Concepts
-- ABI + contract address are required for clients.
-- `window.ethereum` (MetaMask) provides a provider; wrap with `new ethers.BrowserProvider`.
-- Write vs read calls: writes need signer; reads can use provider only.
+## Konsep Kunci
+- Butuh ABI + alamat kontrak untuk klien.
+- `window.ethereum` (MetaMask) memberi provider; bungkus dengan `new ethers.BrowserProvider`.
+- Panggilan tulis vs baca: tulis butuh signer; baca cukup provider.
 
-## Try it
-1) Export ABI and address after deploy: save to `artifacts/Storage.json` or a custom `frontend/contractInfo.json`.
-2) In a front-end (can be a new Vite app), connect:
+## Coba
+1) Setelah deploy, simpan ABI + alamat ke `frontend/contractInfo.json` atau gunakan file di `artifacts/`.
+2) Di frontend (mis. app Vite baru), hubungkan:
 ```ts
 const provider = new ethers.BrowserProvider(window.ethereum);
 const signer = await provider.getSigner();
@@ -18,7 +18,7 @@ const storage = new ethers.Contract(address, abi, signer);
 await storage.setNumber(99);
 const current = await storage.number();
 ```
-3) Add minimal UI: input box + button to set number, display current value.
+3) Buat UI minimal: input angka + tombol set, tampilkan nilai terkini.
 
-## Done when
-You can read/write the contract from a browser and explain signer vs provider.
+## Selesai ketika
+Kamu bisa baca/tulis kontrak dari browser dan jelaskan beda signer vs provider.
